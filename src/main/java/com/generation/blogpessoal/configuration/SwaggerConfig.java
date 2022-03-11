@@ -18,22 +18,15 @@ public class SwaggerConfig {
 	@Bean
 	public OpenAPI springBlogPessoalOpenAPI() {
 		return new OpenAPI()
-				.info(new Info()
-					.title("Projeto Blog Pessoal")
-					.description("Projeto Blog Pessoal - Generation Brasil")
-					.version("v0.0.1")
-				.license(new License()
-					.name("Generation Brasil")
-					.url("https://brazil.generation.org/"))
-				.contact(new Contact()
-					.name("Conteudo Generation")
-					.url("https://github.com/conteudoGeneration")
-					.email("conteudogeneration@gmail.com")))
-				.externalDocs(new ExternalDocumentation()
-					.description("Github")
-					.url("https://github.com/conteudoGeneration/"));
+				.info(new Info().title("Urbanic Blog").description("Projeto Blog Pessoal - Generation Brasil")
+						.version("v0.0.1")
+						.license(new License().name("Generation Brasil").url("https://brazil.generation.org/"))
+						.contact(new Contact().name("Rafael Nunes").url("https://github.com/RafaelNunesDaSilva")
+								.email("nunesrafael663@gmail.com")))
+				.externalDocs(new ExternalDocumentation().description("Github")
+						.url("https://github.com/conteudoGeneration/"));
 	}
-	
+
 	@Bean
 	public OpenApiCustomiser customerGlobalHeaderOpenApiCustomiser() {
 
@@ -59,7 +52,5 @@ public class SwaggerConfig {
 		return new ApiResponse().description(message);
 
 	}
-	
+
 }
-
-
